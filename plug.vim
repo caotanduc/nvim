@@ -13,6 +13,8 @@ if has("nvim")
     Plug 'hrsh7th/cmp-nvim-lsp'
     " Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/nvim-cmp'
+    Plug 'shaunsingh/nord.nvim'
+
 endif
 
 call plug#end()

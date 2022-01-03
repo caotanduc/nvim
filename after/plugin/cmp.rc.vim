@@ -1,5 +1,6 @@
 set omnifunc=
 set completeopt=menu,menuone,noselect shortmess+=c
+set pumheight=5
 
 " inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

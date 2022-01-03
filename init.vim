@@ -1,6 +1,7 @@
 set exrc
 runtime ./plug.vim
 runtime ./maps.vim
+runtime ./gui-win.vim
 
 
 set backspace=indent,eol,start			" not error when typing 
@@ -41,3 +42,4 @@ highlight Visual cterm=none ctermbg=242
 
 highlight Pmenu ctermbg=black ctermfg=159
 highlight PmenuSel ctermbg=154 ctermfg=black
+
