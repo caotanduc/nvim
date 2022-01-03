@@ -1,4 +1,8 @@
+set omnifunc=
 set completeopt=menu,menuone,noselect shortmess+=c
+
+" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 lua <<EOF
   -- Setup nvim-cmp.
@@ -11,7 +15,7 @@ lua <<EOF
         vim.fn["vsnip#anonymous"](arg.body) -- For `vsnip` users.
       end,
     },
-    -- mapping = {
+    mapping = {
     --   ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     --   ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     --   ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
@@ -20,8 +24,8 @@ lua <<EOF
     --     i = cmp.mapping.abort(),
     --     c = cmp.mapping.close(),
     --   }),
-    --   ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    -- },
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.

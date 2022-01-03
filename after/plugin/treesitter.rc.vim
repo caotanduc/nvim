@@ -7,16 +7,15 @@ require 'nvim-treesitter.install'.compilers = { "clang" }
 require 'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true,
-        disable = {},
     },
     indent = {
         enable = false,
-        disable = {},
     },
     ensure_installed = {
         "javascript",
         "cpp",
         "python",
+        "vim",
     }
 }
 EOF

@@ -1,8 +1,7 @@
-autocmd!
-if !1 | finish | endif
 set exrc
 runtime ./plug.vim
 runtime ./maps.vim
+
 
 set backspace=indent,eol,start			" not error when typing 
 set clipboard=unnamed					" global clipboard
@@ -24,7 +23,6 @@ set laststatus=2
 set noshowmode
 
 " auto change working directory
-set autoread
 set autochdir
 autocmd BufEnter * silent! lcd %:p:h
 
@@ -36,11 +34,10 @@ set incsearch nohlsearch
 
 
 highlight LineNr cterm=none ctermbg=black ctermfg=242 
-highlight CursorLineNr cterm=bold ctermfg=220 ctermbg=none
+highlight CursorLineNr cterm=bold ctermfg=220 ctermbg=25
 autocmd InsertEnter,InsertLeave * set cursorline!
 
-highlight Visual cterm=none ctermbg=232
+highlight Visual cterm=none ctermbg=242
 
 highlight Pmenu ctermbg=black ctermfg=159
 highlight PmenuSel ctermbg=154 ctermfg=black
-
