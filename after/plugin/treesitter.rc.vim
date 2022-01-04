@@ -16,6 +16,7 @@ require 'nvim-treesitter.configs'.setup {
         "cpp",
         "python",
         "vim",
+        "lua",
     }
 }
 EOF
