@@ -1,3 +1,10 @@
+"   ____              _____             ____             
+"  / ___|__ _  ___   |_   _|_ _ _ __   |  _ \ _   _  ___ 
+" | |   / _` |/ _ \    | |/ _` | '_ \  | | | | | | |/ __|
+" | |__| (_| | (_) |   | | (_| | | | | | |_| | |_| | (__ 
+"  \____\__,_|\___/    |_|\__,_|_| |_| |____/ \__,_|\___|
+                                                       
+
 set exrc
 runtime ./plug.vim
 runtime ./maps.vim
@@ -11,6 +18,7 @@ set noswapfile hidden
 set showcmd noshowmode
 set path=.,**
 set notimeout nottimeout
+set encoding=UTF-8
 
 
 syntax on
@@ -21,11 +29,10 @@ set scrolloff=8
 set signcolumn=auto
 set cursorline
 set laststatus=2
-set noshowmode
 
 " auto change working directory
 set autochdir
-autocmd BufEnter * silent! lcd %:p:h
+autocmd bufenter * silent! lcd %:p:h
 
 " colorcolumn for word in place > 80
 highlight ColorColumn ctermbg=232
@@ -42,4 +49,3 @@ highlight Visual cterm=none ctermbg=242
 
 highlight Pmenu ctermbg=black ctermfg=159
 highlight PmenuSel ctermbg=154 ctermfg=black
-
