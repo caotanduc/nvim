@@ -17,6 +17,8 @@ require 'nvim-treesitter.configs'.setup {
         "python",
         "vim",
         "lua",
+        "html",
+        "css",
     }
 }
 EOF
