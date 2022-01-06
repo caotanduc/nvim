@@ -11,6 +11,15 @@ runtime ./maps.vim
 runtime ./gui-win.vim
 
 
+if has('vim_starting')
+    set encoding=utf-8
+endif
+scriptencoding utf-8
+
+if &compatible
+    set nocompatible
+endif
+
 set backspace=indent,eol,start			" not error when typing 
 set clipboard=unnamed					" global clipboard
 set noerrorbells belloff=all
@@ -42,10 +51,15 @@ set incsearch nohlsearch
 
 
 highlight LineNr cterm=none ctermbg=black ctermfg=242 
-highlight CursorLineNr cterm=bold ctermfg=220 ctermbg=25
+highlight CursorLineNr cterm=bold ctermfg=220 ctermbg=black
 autocmd InsertEnter,InsertLeave * set cursorline!
 
 highlight Visual cterm=none ctermbg=242
 
 highlight Pmenu ctermbg=black ctermfg=159
 highlight PmenuSel ctermbg=154 ctermfg=black
+
+let g:netrw_banner=0
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
+autocmd FileType netrw set nolist
+
