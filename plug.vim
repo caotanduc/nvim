@@ -5,15 +5,19 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 
 if has("nvim")
     Plug 'shaunsingh/nord.nvim'
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
-    Plug 'voldikss/vim-floaterm'
     Plug 'dracula/vim'
+    Plug 'voldikss/vim-floaterm'
 
-    Plug 'neovim/nvim-lspconfig'
+    " Plug 'dense-analysis/ale'
+    " Plug 'maximbaz/lightline-ale'
+
     Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
     Plug 'nvim-treesitter/playground'
 
@@ -23,6 +27,7 @@ if has("nvim")
     " Plug 'hrsh7th/nvim-cmp'
 
     " full use (option 2)
+    Plug 'neovim/nvim-lspconfig'
 
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'

@@ -11,6 +11,13 @@ highlight Visual gui=none guibg=#6c6c6c
 
 " highlight VertSplit gui=bold guibg=grey
 
+if exists('g:uivonim')
+    set laststatus=1
+    colorscheme dracula
+    highlight Pmenu guibg=black guifg=#afffff
+    highlight PmenuSel guibg=#afff00 guifg=black
+endif
+
 if exists('g:neovide')
     " set guifont=Fira\ Code:h13:w57
     colorscheme dracula

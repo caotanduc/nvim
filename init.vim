@@ -10,7 +10,7 @@ runtime ./plug.vim
 runtime ./maps.vim
 runtime ./gui-win.vim
 
-
+filetype plugin indent on
 if has('vim_starting')
     set encoding=utf-8
 endif
@@ -28,16 +28,29 @@ set showcmd noshowmode
 set path=.,**
 set notimeout nottimeout
 set encoding=UTF-8
+set mouse=a
 
+
+" set listchars=eol:↓,tab:→,trail:~,extends:≫,precedes:≪,space:•
+set listchars=eol:↓,tab:→.,trail:~,space:•
+nnoremap <C-F1> <Cmd>set list!<CR>
 
 syntax on
 set number relativenumber
+" autocmd InsertEnter,InsertLeave * set rnu!
+" set number
+" autocmd InsertEnter * set relativenumber
+" autocmd InsertLeave * set norelativenumber
 set smarttab
 set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smartindent nowrap
 set scrolloff=8
 set signcolumn=auto
 set cursorline
 set laststatus=2
+
+" auto detecth file change and update that file
+set autoread | au CursorHold * checktime | call feedkeys("lh")
+
 
 " auto change working directory
 set autochdir
@@ -59,7 +72,7 @@ highlight Visual cterm=none ctermbg=242
 highlight Pmenu ctermbg=black ctermfg=159
 highlight PmenuSel ctermbg=154 ctermfg=black
 
-let g:netrw_banner=0
-let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
-autocmd FileType netrw set nolist
+" let g:netrw_banner=0
+" let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
+" autocmd FileType netrw set nolist
 
