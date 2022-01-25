@@ -6,15 +6,15 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 
 
 if has("nvim")
+    Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'shaunsingh/nord.nvim'
     Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
     Plug 'dracula/vim'
     Plug 'voldikss/vim-floaterm'
-
     " Plug 'dense-analysis/ale'
     " Plug 'maximbaz/lightline-ale'
 
