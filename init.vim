@@ -33,15 +33,17 @@ set mouse=a
 
 
 " set listchars=eol:↓,tab:→,trail:~,extends:≫,precedes:≪,space:•
-set listchars=eol:↓,tab:→.,trail:~,space:•
+" set listchars=eol:↓,tab:→.,trail:~,space:•
 nnoremap <C-F1> <Cmd>set list!<CR>
 
 syntax on
 set number relativenumber
 set smarttab
-set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smartindent nowrap
+set shiftwidth=4 tabstop=4 softtabstop=4 smartindent nowrap
+" set expandtab
 set scrolloff=8
 set signcolumn=auto
+highlight clear SignColumn
 set cursorline
 set laststatus=2
 
@@ -74,6 +76,7 @@ highlight PmenuSel ctermbg=154 ctermfg=black
 " autocmd FileType netrw set nolist
 
 autocmd FileType html,typescript : setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab smartindent nowrap
+
 
 " 
 " " python for plugin , require 2.7 or 3.6

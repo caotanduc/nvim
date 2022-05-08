@@ -5,7 +5,7 @@ let g:lightline = {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
     \   'right': [ ['lineinfo'],
-    \              [ 'percent' ] ],
+    \              [ 'percent' ]] ,
     \ },
     \ 'component_function': {
     \   'gitbranch': 'FugitiveHead'

@@ -1,24 +1,22 @@
-if !exists('g:loaded_nvim_treesitter')
-    finish
-endif
-
 lua << EOF
-require 'nvim-treesitter.install'.compilers = { "clang" }
-require 'nvim-treesitter.configs'.setup {
-    highlight = {
-        enable = true,
-    },
-    indent = {
-        enable = false,
-    },
-    ensure_installed = {
-        "javascript",
-        "cpp",
-        "python",
-        "vim",
-        "lua",
-        "html",
-        "css",
-    }
+require 'nvim-treesitter.install'.compilers = { "clang", "gcc" }
+
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "c", "lua", "cpp", "vim" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- List of parsers to ignore installing (for "all")
+  ignore_install = { "" },
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+
+    disable = {},
+    additional_vim_regex_highlighting = false,
+  },
 }
 EOF
